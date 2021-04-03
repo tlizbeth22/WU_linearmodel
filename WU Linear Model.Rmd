@@ -1,0 +1,14 @@
+---
+title: "WU Linear Model"
+author: "Tania Boror"
+date: "4/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Read about the data from the website where it is staged.  Then form three regression models; Model1 is SIMS~ARM, Model2 is SIMS~GRIP, and Model3 is SIMS~ARM+GRIP. For each model find a 95% prediction interval of SIMS given a value of 94  for GRIP and 88 for ARM. Compare Model1 with Model3 using anova. Write it up in a markdown document, push the project up to your github account and submit it back to canvas as link.
+
+You can import the data directly from a link to its website.  Copy that link to the clipboard by right clicking on Raw Data and then copy link.
