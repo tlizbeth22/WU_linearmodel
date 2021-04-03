@@ -128,3 +128,5 @@ anova(model.1, model.3)
 ```
 
 The p-value is 0.000004994; therefore it is very unlikely to occur by chance. We reject the null hypothesis. 
+
+The residual standard error with arm and grip os 1.144 while the residual error in model 1 is 1.226. Since 1.144 is smaller than model 1, we conclude model 3 is the best model. 
