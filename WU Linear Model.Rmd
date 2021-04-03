@@ -26,6 +26,7 @@ require(knitr)
 data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt",sep="",header=TRUE)
 ```
 
+### MODEL 1: SIMS~ARM
 
 ```{r}
 basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
@@ -58,3 +59,37 @@ basicNN + geom_point() + geom_smooth(method=lm)
 
 The equation for SIMS explained by ARM is
 SIMS = -4.1 + 0.0545 * ARM 
+
+
+### MODEL 2: SIMS~GRIP
+```{r}
+basicGG <- ggplot(data,aes(y=SIMS,x=GRIP))
+```
+##Now add in scatterplot
+
+```{r}
+basicGG + geom_point()
+```
+
+
+# Numerical results
+
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+
+# Inferential  (Build linear model)
+  
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
+# now add the model fit to our plot
+  
+```{r}
+basicGG + geom_point() + geom_smooth(method=lm)
+``` 
+
+The equation for SIMS explained by GRIP is
+SIMS = -4.8 + 0.0545 * GRIP
