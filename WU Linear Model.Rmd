@@ -121,3 +121,10 @@ predict(model.3, newdata, interval = "prediction")
 
 The equation for SIMS explained by ARM+GRIP is
 SIMS = -5.43 + 0.037 * ARM + 0.024 * GRIP
+
+
+```{r}
+anova(model.1, model.3)
+```
+
+The p-value is 0.000004994; therefore it is very unlikely to occur by chance. We reject the null hypothesis. 
